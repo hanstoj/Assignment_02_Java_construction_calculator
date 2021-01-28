@@ -29,6 +29,19 @@ public class Lab4 {
 
             switch (choice) {
                 case 1:
+                    System.out.println("Enter m");
+                    int m = scan.nextInt();
+                    for (int i = 1; i <= m; i++) {
+                        if (interSum(i))
+                            System.out.print(i + " ");
+                    }
+                    System.out.println();
+
+                    break;
+
+                default:
+
+                case 2:
                     System.out.println("Enter n");
                     double n = scan.nextDouble();
                     for (int i = 1; i <= n; i++) {
@@ -49,11 +62,17 @@ public class Lab4 {
 
     }
 
-    private static boolean isPerfectSquare(double n) {
+    private static boolean (double n) {
         double squared = Math.sqrt(n);
         int truncated = (int) Math.sqrt(n);
 
         return squared == truncated;
+
+    }
+    private static int interSum(int i) {
+        int sum = sum + i;
+
+        return sum;
 
     }
 
