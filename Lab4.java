@@ -1,6 +1,8 @@
+import java.util.Scanner;
+
 /*-------------------------------------------------------------
-// AUTHOR: your name.
-// FILENAME: title of the source file.
+// AUTHOR: Hannah Stojack
+// FILENAME: Lab #4
 // SPECIFICATION: your own description of the program.
 // FOR: CSE 110- Lab #4
 // TIME SPENT: how long it took you to complete the assignment.
@@ -14,18 +16,44 @@ public class Lab4 {
         // Declare some variables you need
         // -->
 
+        int choice = 1;
+        Scanner scan = new Scanner(System.in);
+
         do {
             // Display the menu
             displayMenu();
+            choice = scan.nextInt();
 
             // Ask the user for one option
             // -->
 
-            switch (?????) {
-                // Define four cases for different options. Don't forget "break".
-                // -->
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter n");
+                    double n = scan.nextDouble();
+                    for (int i = 1; i <= n; i++) {
+                        if (isPerfectSquare(i))
+                            System.out.print(i + " ");
+                    }
+                    System.out.println();
+
+                    break;
+
+                default:
+
+                    // Define four cases for different options. Don't forget "break".
+                    // -->
             }
-        } while (?????);
+        } while (choice != 4);
+        // end of loop
+
+    }
+
+    private static boolean isPerfectSquare(double n) {
+        double squared = Math.sqrt(n);
+        int truncated = (int) Math.sqrt(n);
+
+        return squared == truncated;
 
     }
 
